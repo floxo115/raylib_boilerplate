@@ -13,3 +13,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE raylib)
 add_subdirectory(external/catch2)
 target_include_directories(tests PUBLIC external/catch2/src)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+
+add_subdirectory(external/eigen)
+target_include_directories(raylib_boilerplate PUBLIC external/eigen)
+target_include_directories(tests PUBLIC external/eigen)
